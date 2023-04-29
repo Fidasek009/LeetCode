@@ -1,4 +1,4 @@
-// made b ChatGPT i gave up :P
+// made by ChatGPT because i gave up on RUST💀 :P
 
 use lazy_static::lazy_static;
 use std::collections::HashMap;
