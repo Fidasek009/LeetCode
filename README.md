@@ -1,4 +1,4 @@
 # LeetCode
 This is my repo for solving LeetCode challenges
 
-### [My account](https://leetcode.com/fidasek009/)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/fidasek009?theme=dark)](https://leetcode.com/fidasek009/)
