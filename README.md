@@ -25,7 +25,7 @@ This is my repo for solving LeetCode challenges
 
 ## Data structures & common algorithms
 
-### Arrays:
+### Array:
 - Accessing an element by index: **O(1)**
 - Searching for an element (unsorted): **O(n)**
 - Searching for an element (sorted): **O(log n)** with binary search
@@ -38,7 +38,19 @@ std::vector<int> arr(5, 0);
 ```
 
 
-### Linked Lists:
+### String:
+- Finding the length of a string: **O(1)**
+- Appending a string at the end: **O(m)**, where **m** is the length of the string being appended
+- Concatenating two strings: **O(n + m)**, where **n** and **m** are the lengths of the two strings being concatenated
+- Substring extraction: **O(k)**, where **k** is the length of the extracted substring
+- Searching for a substring: **O(n * m)**, where **n** is the length of the main string and **m** is the length of the substring being searched
+- Replacing a substring: **O(n + m)**, where **n** is the length of the main string and **m** is the length of the substring being replaced
+```
+std::string = "Hello, friend."
+```
+
+
+### Linked List:
 - Accessing an element by index: **O(n)**
 - Searching for an element: **O(n)**
 - Inserting or deleting an element at the beginning: **O(1)**
@@ -56,7 +68,7 @@ std::forward_list<int> second (5, 0);
 ```
 
 
-### Stacks & Queues:
+### Stack & Queue:
 - Push (inserting an element): **O(1)**
 - Pop (removing the first element): **O(1)**
 - Peek (viewing the first element): **O(1)**
@@ -68,7 +80,7 @@ std::queue<int> fifo (deck);
 ```
 
 
-### Hash Tables:
+### Hash Table:
 - Insertion: **O(1)** on average (**O(n)** in worst case if collisions occur)
 - Deletion: **O(1)** on average (**O(n)** in worst case if collisions occur)
 - Search: **O(1)** on average (**O(n)** in worst case if collisions occur)
@@ -82,7 +94,7 @@ std::unordered_map<char, int> ascii ({
 ```
 
 
-### Binary Search Trees (BST):
+### Binary Search Tree (BST):
 - Insertion: **O(log n)** on average (**O(n)** in worst case if the tree is unbalanced)
 - Deletion: **O(log n)** on average (**O(n)** in worst case if the tree is unbalanced)
 - Search: **O(log n)** on average (**O(n)** in worst case if the tree is unbalanced)
@@ -94,7 +106,7 @@ struct node {
 ```
 
 
-### Heaps:
+### Heap:
 - Insertion: **O(log n)**
 - Deletion (extracting the minimum or maximum element): **O(log n)**
 - Search: **O(n)** (heaps are not designed for efficient searching)
