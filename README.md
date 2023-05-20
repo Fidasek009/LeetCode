@@ -18,8 +18,8 @@ This is my repo for solving LeetCode challenges
 | 10 - 20 | O( 2<sup>n</sup> ) |
 | 20 - 100 | O( n<sup>3</sup> ) |
 | 100 - 1,000 | O( n<sup>2</sup> ) |
-| 1,000 - 10<sup>5</sup> | O( n ) |
-| 10<sup>5</sup> - 10<sup>6</sup> | O( n log n ) |
+| 1,000 - 10<sup>5</sup> | O( n log n ) |
+| 10<sup>5</sup> - 10<sup>6</sup> | O( n ) |
 | 10<sup>6</sup> - ∞ | O( log n ) |
 
 
