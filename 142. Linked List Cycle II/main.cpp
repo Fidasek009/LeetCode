@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <unordered_set>
 
 using namespace std;
 
@@ -14,20 +15,25 @@ struct ListNode {
 class Solution {
 public:
     ListNode* detectCycle(ListNode *head) {
-        
+        unordered_set<ListNode*> visited;
+
+        while(head){
+            if(visited.find(head) != visited.end()) return head;
+            visited.insert({head});
+            head = head->next;
+        }
+        return NULL;
     }
 };
 
 int main()
 {
-    auto inp = 0;
-
     vector<int> a = {1,2,3,4,5};
     ListNode* ln = nullptr;
     for(int i = a.size()-1; i >= 0; i--) ln = new ListNode(a[i], ln);
     
     Solution s = Solution();
-    auto res = s.detectCycle(inp);
+    auto res = s.detectCycle(ln);
     cout << res;
     return 0;
 }
