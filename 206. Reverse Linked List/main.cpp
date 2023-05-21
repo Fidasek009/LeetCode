@@ -30,13 +30,9 @@ public:
 
 int main()
 {
-    const int a[] = {1,2,3,4,5};
+    vector<int> a = {1,2,3,4,5};
     ListNode* ln = nullptr;
-
-    for (int i = sizeof(a)/sizeof(a[0]) - 1; i >= 0; i--) {
-        ListNode* newNode = new ListNode(a[i], ln);
-        ln = newNode;
-    }
+    for(int i = a.size()-1; i >= 0; i--) ln = new ListNode(a[i], ln);
 
     Solution s = Solution();
     auto res = s.reverseList(ln);
