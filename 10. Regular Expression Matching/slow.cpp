@@ -5,27 +5,25 @@ using namespace std;
 class Solution {
 public:
     bool isMatch(string s, string p) {
-        const int sl = s.length();
-        const int pl = p.length();
-
         // both need to be empty to return true
-        if(pl == 0) return sl == 0;
+        if(p.empty()) return s.empty();
 
-        const bool firstMatch = sl > 0 && (p[0] == s[0] || p[0] == '.');
+        // wherther the 1st char matches
+        const bool firstMatch = !s.empty() && (p[0] == s[0] || p[0] == '.');
 
         // has star
-        if(pl > 1 && p[1] == '*')
-            return isMatch(s, p.substr(2, pl)) || firstMatch && isMatch(s.substr(1, sl), p);
+        if(!p.empty() && p[1] == '*')
+            return isMatch(s, p.substr(2)) || firstMatch && isMatch(s.substr(1), p);
         
         // doesn't have star
-        return firstMatch && isMatch(s.substr(1, sl), p.substr(1, pl));
+        return firstMatch && isMatch(s.substr(1), p.substr(1));
     }
 };
 
 int main()
 {
-    string str = "";
-    string reg = "";
+    string str = "aaa";
+    string reg = "ab*a*c*a";
     Solution s = Solution();
     auto res = s.isMatch(str, reg);
     cout << res;
