@@ -12,7 +12,7 @@ public:
         const bool firstMatch = !s.empty() && (p[0] == s[0] || p[0] == '.');
 
         // has star
-        if(!p.empty() && p[1] == '*')
+        if(p.length() > 1 && p[1] == '*')
             return isMatch(s, p.substr(2)) || firstMatch && isMatch(s.substr(1), p);
         
         // doesn't have star
