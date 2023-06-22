@@ -1,17 +1,25 @@
-#include <iostream>
-#include <vector>
+# Intuition
+I decided to take advantage of the constraint `-100 <= matrix[i][j] <= 100` so to mark visited elements I simply set it to **128** (can be anything higher than 100)
 
-using namespace std;
+# Approach
+I went with a while loop aproach ending when `out.size()` reaches the number of elements in `matrix`. I have 4 nested while loops each going in a different direction.
 
+# Complexity
+- Time complexity: ***O(n)***
+
+- Space complexity: ***O(n)***
+
+# Code
+```
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
         vector<int> out;
-        int m = matrix.size()-1,                    // height
-            n = matrix[0].size()-1,                 // width
-            size = matrix.size()*matrix[0].size(),  // total element count
-            y = 0,                                  // starting y position
-            x = -1;                                 // starting x position
+        int m = matrix.size()-1,                      // height
+            n = matrix[0].size()-1,                   // width
+            size = matrix.size()*matrix[0].size(),    // total element count
+            y = 0,                                    // starting y position
+            x = -1;                                   // starting x position
             
             
 
@@ -41,14 +49,4 @@ public:
         return out;
     }
 };
-
-int main()
-{
-    // vector<vector<int>> a = {{0}};
-    // vector<vector<int>> a = {{1,2,3},{4,5,6},{7,8,9}}; // 1,2,3,6,9,8,7,4,5
-    vector<vector<int>> a = {{1,2,3,4},{5,6,7,8},{9,10,11,12}}; // 1,2,3,4,8,12,11,10,9,5,6,7
-    Solution s = Solution();
-    auto res = s.spiralOrder(a);
-    for(int x : res) cout << x << ", ";
-    return 0;
-}
+```
