@@ -46,7 +46,8 @@ std::vector<int> arr(5, 0);
 - Searching for a substring: **O(n * m)**, where **n** is the length of the main string and **m** is the length of the substring being searched
 - Replacing a substring: **O(n + m)**, where **n** is the length of the main string and **m** is the length of the substring being replaced
 ```
-std::string = "Hello, friend."
+std::string s = "Hello, friend.";
+std::string s(5, '0');
 ```
 
 
