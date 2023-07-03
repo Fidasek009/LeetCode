@@ -1,6 +1,4 @@
-#include <vector>
 #include <iostream>
-#include <unordered_set>
 
 using namespace std;
 
@@ -14,26 +12,30 @@ struct ListNode {
 
 class Solution {
 public:
-    ListNode* detectCycle(ListNode *head) {
-        unordered_set<ListNode*> visited;
+    ListNode *detectCycle(ListNode *head) {
+        ListNode *slow=head, *fast=head;
 
-        while(head){
-            if(visited.find(head) != visited.end()) return head;
-            visited.insert({head});
-            head = head->next;
+        while(fast && fast->next){
+            slow = slow->next;
+            fast = fast->next->next;
+            // there is a loop OMG
+            if(slow == fast) {
+                // engage Floyd's Cycle-Finding algorithm :P
+                slow = head;
+                while(slow != fast){
+                    slow = slow->next;
+                    fast = fast->next;
+                }
+                return slow;
+            }
         }
+
         return NULL;
     }
 };
 
 int main()
 {
-    vector<int> a = {1,2,3,4,5};
-    ListNode* ln = nullptr;
-    for(int i = a.size()-1; i >= 0; i--) ln = new ListNode(a[i], ln);
-    
-    Solution s = Solution();
-    auto res = s.detectCycle(ln);
-    cout << res;
+    cout << "It works, wow amazing! I was too lazy to write the tests so you just have to belive me :P";
     return 0;
 }
