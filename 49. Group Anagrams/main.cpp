@@ -17,8 +17,7 @@ public:
         }
 
         vector<vector<string>> out;
-        for(auto x : map) 
-            out.push_back(x.second);
+        for(auto x : map) out.push_back(x.second);
 
         return out;
     }
