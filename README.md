@@ -65,7 +65,8 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-std::forward_list<int> second (5, 0);
+std::forward_list<int> singlyLinkedList (5, 0);
+std::list<int> doublyLinkedList (5, 0);
 ```
 
 
