@@ -101,9 +101,11 @@ std::unordered_map<char, int> ascii ({
 - Deletion: **O(log n)** on average (**O(n)** in worst case if the tree is unbalanced)
 - Search: **O(log n)** on average (**O(n)** in worst case if the tree is unbalanced)
 ```
-struct node {
-  int key;
-  node *left, *right;
+struct TreeNode {
+    int val;
+    TreeNode *left, *right;
+
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 ```
 
