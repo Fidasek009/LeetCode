@@ -40,6 +40,7 @@ public:
                 Node *node = q.front();
                 q.pop();
 
+                // set a ponter to the next right node
                 node->next = (i+1 < n) ? q.front() : NULL;
 
                 // push all nodes from row below to queue
