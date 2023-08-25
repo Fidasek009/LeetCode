@@ -8,7 +8,7 @@ private:
     vector<string> OUT;
 
     void gen(int n, int m, string s){
-        if(n == 0 && m == 0) OUT.push_back(s);
+        if(n == 0 && m == 0) return OUT.push_back(s);
 
         if(n > 0) gen(n-1, m, s+'(');
         if(m > n) gen(n, m-1, s+')');
